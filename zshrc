@@ -1,31 +1,26 @@
-# Keep only the first occurence of each duplicated value
+# keep only the first occurence of each duplicated value in path
 typeset -U path
 
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export HISTCONTROL=ignoreboth
 export XDG_CONFIG_HOME="$HOME/.config"
 
+HISTCONTROL=ignoreboth
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
 
-# Zsh does not use readline.
-# Instead it uses Zsh Line Editor (ZLE).
-# Here we set the emacs mode explicitly.
+# zsh does not use readline.
+# instead it uses Zsh Line Editor (ZLE).
+# here we set the emacs mode explicitly.
 bindkey -e
 
 export EDITOR=nvim
 
-. $HOME/.dotsecrets/secret_tokens
-
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename "~/.zshrc"
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 # enable bash completion compatibility mode
 autoload bashcompinit
@@ -69,8 +64,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 # load custom functions & aliases
-source $HOME/.helpers/index
+. $HOME/.helpers/index
+# load secret tokens
+. $HOME/.dotsecrets/secret_tokens
 
+# see https://github.com/wofr06/lesspipe
+export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then

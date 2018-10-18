@@ -1,3 +1,5 @@
+# vim: set syntax=zsh:
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export ZPLUG_HOME=/usr/local/opt/zplug
 else
