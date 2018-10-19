@@ -7,6 +7,7 @@
 # load local config
 [[ -f ~/.zshrc.local ]] && . ~/.zshrc.local
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ `uname` == "Linux" ]]; then
   [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 fi
+
