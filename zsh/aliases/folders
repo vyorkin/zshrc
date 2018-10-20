@@ -1,0 +1,12 @@
+# common
+alias desk='cd ~/Desktop'
+alias docs='cd ~/Documents'
+
+# projects
+alias work='cd ~/projects/work'
+alias play='cd ~/projects/play'
+alias gith='cd ~/projects/github'
+
+# my
+alias dots='cd ~/.dotfiles'
+alias blog='cd ~/projects/vyorkin.github.io'

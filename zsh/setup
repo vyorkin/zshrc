@@ -1,9 +1,8 @@
 # vim: set syntax=zsh:
 
-# load custom executable functions
-for function in ~/.zsh/functions/*; do
-  . $function
-done
+# load custom executable functions and aliases
+for f in ~/.zsh/functions/*; do source $f; done
+for f in ~/.zsh/aliases/*; do source $f; done
 
 # extra files in ~/.zsh/configs/pre, ~/.zsh/configs, and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
