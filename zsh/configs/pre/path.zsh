@@ -14,7 +14,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     /usr/local/x8664pcelfgcc/bin/
     $HOME/Library/Python/3.6/bin
     /usr/local/opt/texinfo/bin
-    /usr/local/opt/erlang@19/bin
+    /usr/local/opt/erlang@21/bin
     $GOPATH/bin
     $path
   )
