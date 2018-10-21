@@ -11,15 +11,7 @@ setopt globcomplete nocaseglob
 unsetopt nomatch
 
 # auto insert -v options
-for c in cp rm chmod rename mv perl-rename mkdir; do
-  alias $c="$c -v"
-done
-
-zstyle :compinstall filename "~/.zshrc"
-autoload -Uz compinit
-compinit
-
-# enable bash completion compatibility mode
-autoload bashcompinit
-bashcompinit
+# for c in cp rm chmod rename mv perl-rename mkdir; do
+#   alias $c="$c -v"
+# done
 

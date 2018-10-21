@@ -6,8 +6,7 @@ stty -ixon
 # here we set the emacs mode explicitly.
 bindkey -e
 
-bindkey "^F" vi-cmd-mode
-
+bindkey "^S" vi-cmd-mode
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^K" kill-line
