@@ -1,0 +1,19 @@
+alias vagi='vagrant init'
+
+alias vagu='vagrant up'
+alias va='vagrant up --no-provision'
+
+alias vagh='vagrant halt'
+alias vags='vagrant suspend'
+alias vagr='vagrant resume'
+alias vagrs='vagrant reload'
+alias vagd='vagrant destroy'
+alias vagssh='vagrant ssh'
+alias vagstat='vagrant status'
+
+alias vagbl='vagrant box list'
+alias vagba='vagrant box add'
+alias vagbd='vagrant box destroy'
+
+alias vaguw='vagrant up --provider=vmware_fusion'
+alias vaw='vagrant up --provider=vmware_fusion --no-provision'

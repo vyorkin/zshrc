@@ -1,0 +1,37 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+alias ~='cd ~'
+
+alias -g C='| wc -l'
+alias -g H='| head'
+alias -g L='| less'
+alias -g N='| /dev/null'
+alias -g S='| sort'
+alias -g G='| grep'
+
+alias ls='ls -hN --color=auto --group-directories-first'
+alias ll='ls -l'
+alias lla='ls -lA'
+alias la='ls -A'
+
+# common shell functions
+alias less='less -r'
+alias tf='tail -f'
+alias l='less'
+alias lh='ls -alt | head' # see the last modified files
+alias cl='clear'
+
+# keys
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo 'id_rsa.pub copied'"
+
+# ps
+alias psa="ps aux"
+alias psg="ps aux | grep "
+
+# show me files matching "ls grep"
+alias lsg='ll | grep'
+
+alias ttt='rbenv ctags & gem ctags'

@@ -1,0 +1,2 @@
+alias outdated='brew outdated'
+alias up='brew upgrade'

@@ -12,6 +12,10 @@ function x() {
       export NVM_DIR="$HOME/.nvm"
       . "/usr/local/opt/nvm/nvm.sh"
     fi
+  elif [[ $1 = ruby ]]; then
+    eval "$(rbenv init -)"
+  elif [[ $1 = java ]]; then
+    eval "$(jenv init -)"
   elif [[ $1 = ocaml ]]; then
     . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
   elif [[ $1 = gcloud ]]; then

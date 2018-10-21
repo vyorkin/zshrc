@@ -1,0 +1,12 @@
+# tmux
+alias tk='tmux kill-session -t'
+
+# tmuxinator
+alias mux='tmuxinator'
+alias muxl='mux list'
+alias muxn='mux new'
+alias muxo='mux open'
+alias muxe='mux edit'
+alias muxs='mux start'
+alias muxk='mux stop'
+alias muxt='mux local'
