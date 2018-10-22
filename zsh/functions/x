@@ -4,6 +4,7 @@
 # "x" is for "extended shell"
 function x() {
   if [[ $1 = js ]]; then
+    echo "+ nvm"
     if [[ `uname` == "Linux" ]]; then
       . /usr/share/nvm/init-nvm.sh
     fi
@@ -13,13 +14,17 @@ function x() {
       . "/usr/local/opt/nvm/nvm.sh"
     fi
   elif [[ $1 = ruby ]]; then
+    echo "+ rbenv"
     eval "$(rbenv init -)"
   elif [[ $1 = java ]]; then
+    echo "+ jenv"
     eval "$(jenv init -)"
   elif [[ $1 = ocaml ]]; then
+    echo "+ opam"
     . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
   elif [[ $1 = gcloud ]]; then
-    if [[ `uname` == "Darwin" ]] then
+    echo "+ gcloud"
+    if [[ `uname` == "Darwin" ]]; then
       # find a way to install them by zplug
       # https://github.com/littleq0903/gcloud-zsh-completion
       # others: https://github.com/unixorn/awesome-zsh-plugins#even-more-completions
@@ -27,6 +32,9 @@ function x() {
       . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
     fi
   else
+    echo "+ fzf"
+    echo "+ bashhub"
+    echo "+ travis ci"
     [[ -f ~/.fzf.zsh ]] && . ~/.fzf.zsh
     [[ -f ~/.bashhub/bashhub.zsh ]] && . ~/.bashhub/bashhub.zsh
     [[ -f ~/.travis/travis.sh ]] && . ~/.travis/travis.sh

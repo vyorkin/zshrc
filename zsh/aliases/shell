@@ -12,7 +12,6 @@ alias -g N='| /dev/null'
 alias -g S='| sort'
 alias -g G='| grep'
 
-alias ls='ls -hN --color=auto --group-directories-first'
 alias ll='ls -l'
 alias lla='ls -lA'
 alias la='ls -A'
