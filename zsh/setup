@@ -1,17 +1,5 @@
 # vim: set syntax=zsh:
 
-zstyle :compinstall filename "~/.zshrc"
-autoload -Uz compinit
-compinit
-
-# enable bash completion compatibility mode
-autoload bashcompinit
-bashcompinit
-
-# load custom executable functions and aliases
-for f in ~/.zsh/functions/*; do source $f; done
-for f in ~/.zsh/aliases/*; do source $f; done
-
 # extra files in ~/.zsh/configs/pre, ~/.zsh/configs, and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
 load_configs() {
@@ -50,6 +38,3 @@ load_configs() {
 }
 
 load_configs "$HOME/.zsh/configs"
-
-# load plugins
-[[ -f ~/.zsh/plugins ]] && . ~/.zsh/plugins
