@@ -1,0 +1,14 @@
+# vim: set syntax=zsh:
+
+function vpn() {
+  case $2 in
+    on)
+      osascript -e "tell app \"Tunnelblick\" to connect \"$1\"" > /dev/null
+      ;;
+    off)
+      osascript -e "tell app \"Tunnelblick\" to disconnect \"$1\"" > /dev/null
+      ;;
+    *)
+    echo "${0} {on|off}"
+  esac
+}
