@@ -3,3 +3,6 @@ alias outdatedc='brew cask outdated'
 
 alias up='brew upgrade'
 alias upc='brew cask upgrade'
+
+alias bi='brew install'
+alias bu='brew uninstall'

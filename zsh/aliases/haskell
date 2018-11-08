@@ -1,4 +1,6 @@
 alias si="stack install"
+alias sb="stack build"
+alias se="stack exec --"
 alias stf="stack test --fast --haddock-deps"
 alias stfw="stack test --fast --haddock-deps --file-watch"
 alias sho="stack haddock --open"
