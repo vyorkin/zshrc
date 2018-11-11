@@ -1,3 +1,7 @@
+alias cb="cabal new-build all"
+alias ct="cabal new-test all"
+alias cr="cabal new-repl"
+
 alias si="stack install"
 alias sb="stack build"
 alias se="stack exec --"
