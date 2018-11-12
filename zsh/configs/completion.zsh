@@ -3,8 +3,7 @@ autoload -Uz compinit
 compinit
 
 # enable bash completion compatibility mode
-# autoload bashcompinit
-# bashcompinit
+autoload -U +X bashcompinit && bashcompinit
 
 zmodload -i zsh/complist
 setopt hash_list_all     # hash everything before completion
