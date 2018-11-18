@@ -3,7 +3,11 @@
 # manually load heavy stuff if needed
 # "x" is for "extended shell"
 function x() {
-  if [[ $1 = js ]]; then
+  if [[ $1 = nix ]]; then
+    if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
+      . ~/.nix-profile/etc/profile.d/nix.sh
+    fi
+  elif [[ $1 = js ]]; then
     echo "+ nvm"
     if [[ `uname` == "Linux" ]]; then
       . /usr/share/nvm/init-nvm.sh
