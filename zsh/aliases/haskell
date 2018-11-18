@@ -1,6 +1,7 @@
-alias cb="cabal new-build all --ghc-option=-ferror-spans --disable-library-profiling"
+alias cb="cabal new-build all"
 alias ct="cabal new-test all"
 alias cr="cabal new-repl"
+alias ce="cabal new-exec"
 
 alias si="stack install"
 alias sb="stack build"
