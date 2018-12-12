@@ -2,6 +2,7 @@
 typeset -U path
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  # /usr/local/opt/llvm/bin
   path=(
     /usr/local/sbin
     $HOME/bin
@@ -10,7 +11,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     $HOME/.psvm/current/bin
     $HOME/.cargo/bin
     $HOME/.cabal/bin
-    /usr/local/opt/llvm/bin
     /usr/local/i386elfgcc/bin
     /usr/local/x8664pcelfgcc/bin/
     $HOME/Library/Python/3.6/bin
