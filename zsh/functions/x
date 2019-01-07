@@ -9,7 +9,7 @@ function x() {
     fi
   elif [[ $1 = js ]]; then
     echo "+ nvm"
-    if [[ `uname` == "Linux" ]]; then
+    if [[ `uname -r` == *"ARCH" ]]; then
       . /usr/share/nvm/init-nvm.sh
     fi
     if [[ `uname` == "Darwin" ]]; then
@@ -29,7 +29,6 @@ function x() {
   elif [[ $1 = gcloud ]]; then
     echo "+ gcloud"
     if [[ `uname` == "Darwin" ]]; then
-      # find a way to install them by zplug
       # https://github.com/littleq0903/gcloud-zsh-completion
       # others: https://github.com/unixorn/awesome-zsh-plugins#even-more-completions
       . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
