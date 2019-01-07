@@ -1,10 +1,13 @@
 # vim: set syntax=zsh:
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ `uname` == "Darwin" ]]; then
   export ZPLUG_HOME=/usr/local/opt/zplug
-else
+elif [[ `uname -r` == *"ARCH" ]]; then
   export ZPLUG_HOME="$HOME/.zplug"
 fi
+
+# for NixOS we set ZPLUG_HOME in the pkg options
+# so there is no need to do it here
 
 . $ZPLUG_HOME/init.zsh
 
