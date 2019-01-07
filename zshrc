@@ -4,5 +4,4 @@ for f in ~/.zsh/aliases/*; do source $f; done
 
 . ~/.zsh/setup
 
-[[ -f ~/.zsh/plugins ]] && . ~/.zsh/plugins
 [[ -f ~/.dotsecrets/secret_tokens ]] && . ~/.dotsecrets/secret_tokens

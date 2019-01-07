@@ -1,7 +1,7 @@
 # keep only the first occurence of each duplicated value in path
 typeset -U path
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ `uname` == "Darwin" ]]; then
   # /usr/local/opt/llvm/bin
   path=(
     /usr/local/sbin
@@ -20,7 +20,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     $GOPATH/bin
     $path
   )
-else
+elif [[ `uname -r` == *"ARCH" ]]; then
   path=(
     /usr/local/sbin
     $HOME/bin
@@ -31,4 +31,4 @@ else
     /usr/local/opt/openssl/bin
     $path
   )
- fi
+fi
