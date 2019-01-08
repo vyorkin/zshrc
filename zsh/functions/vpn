@@ -3,10 +3,10 @@
 function vpn() {
   case $2 in
     on)
-      systemctl start openvpn-home.service
+      systemctl start openvpn-$1.service
       ;;
     off)
-      systemctl stop openvpn-home.service
+      systemctl stop openvpn-$1.service
       ;;
     *)
     echo "${0} {on|off}"
