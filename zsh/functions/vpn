@@ -3,10 +3,10 @@
 function vpn() {
   case $2 in
     on)
-      osascript -e "tell app \"Tunnelblick\" to connect \"$1\"" > /dev/null
+      systemctl start openvpn-home.service
       ;;
     off)
-      osascript -e "tell app \"Tunnelblick\" to disconnect \"$1\"" > /dev/null
+      systemctl stop openvpn-home.service
       ;;
     *)
     echo "${0} {on|off}"
