@@ -8,5 +8,5 @@ alias play='cd ~/projects/play'
 alias gith='cd ~/projects/github'
 
 # my
-alias dots='cd ~/.dotfiles'
-alias blog='cd ~/projects/vyorkin.github.io'
+alias dots='cd ~/projects/personal/nixos-config/home/dotfiles'
+alias blog='cd ~/projects/personal/vyorkin.github.io'
