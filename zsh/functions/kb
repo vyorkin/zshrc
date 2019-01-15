@@ -1,0 +1,7 @@
+# vim: set syntax=zsh:
+
+# setup keyboard
+function kb() {
+  xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+  xmodmap ~/.Xmodmap
+}
