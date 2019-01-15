@@ -32,5 +32,3 @@ alias psg="ps aux | grep "
 
 # show me files matching "ls grep"
 alias lsg='ll | grep'
-
-alias ttt='rbenv ctags & gem ctags'

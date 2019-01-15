@@ -1,8 +1,0 @@
-alias p="sudo pacman"
-alias pi="sudo pacman -S"
-alias pu="sudo pacman -R"
-alias pa="sudo pacman -Syy"
-alias ppp="sudo pacman -Syu"
-
-# list orphan programs
-alias orphans="pacman -Qdt"
