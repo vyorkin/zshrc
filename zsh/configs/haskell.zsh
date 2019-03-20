@@ -8,4 +8,4 @@ if [ -e ~/.nix-profile/bin/ghc ]; then
 fi
 
 # add stack compiler-tools to PATH
-PATH=$(stack path --compiler-tools-bin):$PATH
+# PATH=$(stack path --compiler-tools-bin):$PATH
