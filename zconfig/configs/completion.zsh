@@ -1,6 +1,8 @@
 zstyle :compinstall filename "~/.zshrc"
 autoload -Uz compinit
-compinit
+
+# `-u` is to prevent the "zsh compinit: insecure directories"
+compinit -u
 
 # enable bash completion compatibility mode
 autoload -U +X bashcompinit && bashcompinit
@@ -63,4 +65,3 @@ compdef _gnu_generic gdb
 # because I don't care about others
 users=(vyorkin root)
 zstyle ':completion:*' users $users
-

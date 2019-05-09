@@ -1,6 +1,6 @@
 # vim: set syntax=zsh:
 
-# extra files in ~/.zsh/configs/pre, ~/.zsh/configs, and ~/.zsh/configs/post
+# extra files in ~/.zconfig/configs/pre, ~/.zconfig/configs, and ~/.zconfig/configs/post
 # these are loaded first, second, and third, respectively.
 load_configs() {
   _dir="$1"
@@ -37,4 +37,4 @@ load_configs() {
   fi
 }
 
-load_configs "$HOME/.zsh/configs"
+load_configs "$HOME/.zconfig/configs"

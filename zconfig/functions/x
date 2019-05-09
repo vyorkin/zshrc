@@ -5,6 +5,7 @@
 function x() {
   if [[ $1 = nix ]]; then
     if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
+      # makes sense if not on nixos
       . ~/.nix-profile/etc/profile.d/nix.sh
     fi
   elif [[ $1 = js ]]; then
