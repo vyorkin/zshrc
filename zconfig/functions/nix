@@ -1,0 +1,14 @@
+# vim: set syntax=zsh:
+
+function gc() {
+  # Download a new version of the nixpkgs channel,
+  # which holds the description of all the software
+  nix-channel --update
+  # Upgrade installed packages.
+  nix-env -u --always
+  # Beware, this will result in dangling symlinks.
+  # You may be smarter and also remove the target of those symlinks.
+  rm /nix/var/nix/gcroots/auto/*
+  # Delete old generations of all profiles, then collect garbage
+  nix-collect-garbage -d
+}
