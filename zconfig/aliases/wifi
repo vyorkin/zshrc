@@ -1,0 +1,9 @@
+alias wifil='nmcli device wifi list'
+alias wifiu='nmcli device wifi rescan'
+alias wific='nmcli device wifi connect'
+alias wifie='nmcli connection edit'
+
+alias wifioff='nmcli radio wifi off'
+alias wifion='nmcli radio wifi on'
+
+alias wifir='wifioff && wifion'
