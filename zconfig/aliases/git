@@ -57,6 +57,7 @@ alias gpl='git pl'
 alias gplp='git plp'
 alias gplr='git up'
 alias gps='git ps'
+alias gpsa='git psa'
 
 alias gnb='git nb'
 
