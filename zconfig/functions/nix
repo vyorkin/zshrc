@@ -12,3 +12,10 @@ function gc() {
   # Delete old generations of all profiles, then collect garbage
   nix-collect-garbage -d
 }
+
+function sw() {
+  sudo nixos-rebuild switch
+  nmcli radio wifi off
+  nmcli radio wifi on
+  kb
+}
