@@ -3,14 +3,19 @@
 function gc() {
   # Download a new version of the nixpkgs channel,
   # which holds the description of all the software
-  nix-channel --update
+  # UPD: I don't use channels anymore, submodules ftw
+
+  # nix-channel --update
+
   # Upgrade installed packages.
-  nix-env -u --always
+  # UPD: I don't use nix-env for package management
+  # nix-env -u --always
+
   # Beware, this will result in dangling symlinks.
   # You may be smarter and also remove the target of those symlinks.
-  rm /nix/var/nix/gcroots/auto/*
+  sudo rm /nix/var/nix/gcroots/auto/*
   # Delete old generations of all profiles, then collect garbage
-  nix-collect-garbage -d
+  sudo nix-collect-garbage -d
 }
 
 function sw() {
