@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fdd - cd to selected directory
 fdd() {
   local dir

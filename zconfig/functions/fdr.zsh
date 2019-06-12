@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fdr - cd to selected parent directory
 fdr() {
   local declare dirs=()

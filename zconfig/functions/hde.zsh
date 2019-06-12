@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # generate haskell emacs tags
 function hde() {
   haskdogs --hasktags-args --etags

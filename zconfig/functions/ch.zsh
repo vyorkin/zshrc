@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # browse chrome history
 ch() {
   local cols sep
@@ -16,4 +14,3 @@ ch() {
   awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\n", $1, $2}' |
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
 }
-

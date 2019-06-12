@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fcoc - checkout git commit
 fcoc() {
   local commits commit

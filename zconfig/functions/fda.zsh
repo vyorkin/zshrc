@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fda - including hidden directories
 fda() {
   local dir

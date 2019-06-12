@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fch is for "fucking cabal hell"
 # see https://github.com/serras/emacs-haskell-tutorial/blob/master/tutorial.md#dealing-with-cabal-hell
 # for more info

@@ -1,4 +1,10 @@
-# vim: set syntax=zsh:
+
+
+# Generate Nix expression to build NPM package.
+function n2nix() {
+  node2nix --input <( echo "[\"$1\"]")
+}
+
 
 function gc() {
   # Download a new version of the nixpkgs channel,

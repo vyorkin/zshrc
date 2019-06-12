@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fcs - get git commit sha
 # example usage: git rebase -i `fcs`
 fcs() {

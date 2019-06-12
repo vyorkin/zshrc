@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fbr - checkout git branch (including remote branches)
 fbr() {
   local branches branch

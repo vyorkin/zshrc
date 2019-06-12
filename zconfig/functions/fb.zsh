@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fb - checkout git branch
 fb() {
   local branches branch

@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fkill - kill process
 fkill() {
   local pid
@@ -10,4 +8,3 @@ fkill() {
     echo $pid | xargs kill -${1:-9}
   fi
 }
-

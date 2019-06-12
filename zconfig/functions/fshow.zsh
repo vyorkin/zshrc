@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # fshow - git commit browser
 fshow() {
   git log --graph --color=always \

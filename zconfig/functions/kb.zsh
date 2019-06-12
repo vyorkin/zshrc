@@ -1,5 +1,3 @@
-# vim: set syntax=zsh:
-
 # setup keyboard
 function kb() {
   xset r rate 300 65
