@@ -24,9 +24,6 @@ function x() {
   elif [[ $1 = java ]]; then
     echo "+ jenv"
     eval "$(jenv init -)"
-  elif [[ $1 = ocaml ]]; then
-    echo "+ opam"
-    . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
   elif [[ $1 = gcloud ]]; then
     echo "+ gcloud"
     if [[ `uname` == "Darwin" ]]; then
@@ -44,4 +41,3 @@ function x() {
     [[ -f ~/.travis/travis.sh ]] && . ~/.travis/travis.sh
   fi
 }
-
