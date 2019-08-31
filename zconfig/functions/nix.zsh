@@ -22,6 +22,7 @@ function gc() {
   sudo rm /nix/var/nix/gcroots/auto/*
   # Delete old generations of all profiles, then collect garbage
   sudo nix-collect-garbage -d
+  sudo nix optimise-store
 }
 
 function sw() {

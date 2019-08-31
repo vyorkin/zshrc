@@ -6,4 +6,4 @@ for f in ~/.zconfig/aliases/*; do source $f; done
 
 . ~/.zconfig/setup.zsh
 
-[[ -f ~/.dotsecrets/secret_tokens ]] && . ~/.dotsecrets/secret_tokens
+[[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
