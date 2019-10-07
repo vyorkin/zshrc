@@ -1,4 +1,9 @@
-
+function nixify() {
+  if [ ! -e ./.envrc ]; then
+    echo "use nix" > .envrc
+    direnv allow
+  fi
+}
 
 # Generate Nix expression to build NPM package.
 function n2nix() {
@@ -23,6 +28,8 @@ function gc() {
   # Delete old generations of all profiles, then collect garbage
   sudo nix-collect-garbage -d
   sudo nix optimise-store
+  # Re-generate apropos db
+  su -l root -c mandb
 }
 
 function sw() {
