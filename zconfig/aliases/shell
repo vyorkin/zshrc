@@ -33,3 +33,6 @@ alias psg="ps aux | grep "
 
 # show me files matching "ls grep"
 alias lsg='ll | grep'
+
+# other useful shortcuts
+alias hi='nvim $HISTFILE'
