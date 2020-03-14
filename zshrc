@@ -7,7 +7,6 @@ for f in ~/.zconfig/aliases/*; do source $f; done
 . ~/.zconfig/setup.zsh
 
 eval "$(direnv hook zsh)"
-eval "$(starship init zsh)"
 
 [[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
 
