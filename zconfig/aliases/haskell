@@ -1,7 +1,14 @@
-alias cb="cabal new-build all"
-alias ct="cabal new-test all"
-alias cr="cabal new-repl"
-alias ce="cabal new-exec"
+alias cb="cabal build"
+alias ct="cabal test"
+alias cr="cabal repl"
+alias cg="cabal get"
+alias cl="cabal list"
+alias ci="cabal info"
+
+alias ccep="cabal configure --enable-profiling"
+alias ccdp="cabal configure --disable-profiling"
+
+alias h="hoogle"
 
 alias si="stack install"
 alias sb="stack build"
@@ -11,3 +18,4 @@ alias stfw="stack test --fast --haddock-deps --file-watch"
 alias sho="stack haddock --open"
 alias shs="stack hoogle -- server --local --port=8089"
 alias shg="stack hoogle -- generate --local"
+alias sgd="stack dot --external | dot -Tpng | feh -"

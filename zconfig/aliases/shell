@@ -22,7 +22,6 @@ alias less='less -r'
 alias tf='tail -f'
 alias l='less'
 alias lh='ls -alt | head' # see the last modified files
-alias cl='clear'
 
 # keys
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo 'id_rsa.pub copied'"
