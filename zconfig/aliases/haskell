@@ -8,8 +8,6 @@ alias ci="cabal info"
 alias ccep="cabal configure --enable-profiling"
 alias ccdp="cabal configure --disable-profiling"
 
-alias h="hoogle"
-
 alias si="stack install"
 alias sb="stack build"
 alias se="stack exec --"
