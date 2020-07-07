@@ -1,4 +1,4 @@
 # generate haskell vim tags
-function hdv() {
+hdv() {
   haskdogs --hasktags-args --ctags
 }

@@ -1,6 +1,4 @@
-# vim: set syntax=zsh:
-
-function vpn() {
+vpn() {
   case $2 in
     on)
       systemctl start openvpn-$1.service

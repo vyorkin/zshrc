@@ -1,4 +1,4 @@
-function nixify() {
+nixify() {
   if [ ! -e ./.envrc ]; then
     echo "use nix" > .envrc
     direnv allow
@@ -6,16 +6,16 @@ function nixify() {
 }
 
 # Generate Nix expression to build NPM package.
-function n2nix() {
+n2nix() {
   node2nix --input <( echo "[\"$1\"]")
 }
 
-function gc() {
+gc() {
   # Delete old generations of all profiles, then collect garbage
   sudo nix-collect-garbage -d
 }
 
-function gca() {
+gca() {
   # Download a new version of the nixpkgs channel,
   # which holds the description of all the software
   # UPD: I don't use channels anymore, submodules ftw
@@ -35,7 +35,7 @@ function gca() {
   su -l root -c mandb
 }
 
-function sw() {
+sw() {
   sudo nixos-rebuild switch
   nmcli radio wifi off
   nmcli radio wifi on

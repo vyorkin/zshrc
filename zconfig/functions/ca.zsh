@@ -1,4 +1,4 @@
 # calculate with GNU software calculator
-function ca() {
+ca() {
   printf "%s\n" "$*" | bc
 }

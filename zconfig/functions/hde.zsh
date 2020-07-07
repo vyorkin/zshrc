@@ -1,4 +1,4 @@
 # generate haskell emacs tags
-function hde() {
+hde() {
   haskdogs --hasktags-args --etags
 }

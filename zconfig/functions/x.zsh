@@ -2,7 +2,7 @@
 
 # manually load heavy stuff if needed
 # "x" is for "extended shell"
-function x() {
+x() {
   if [[ $1 = nix ]]; then
     if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
       # makes sense if not on nixos
