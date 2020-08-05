@@ -9,14 +9,15 @@ x() {
       . ~/.nix-profile/etc/profile.d/nix.sh
     fi
   elif [[ $1 = js ]]; then
-    echo "+ nvm"
     if [[ `uname -r` == *"ARCH" ]]; then
       . /usr/share/nvm/init-nvm.sh
+      echo "+ nvm"
     fi
     if [[ `uname` == "Darwin" ]]; then
       # see output of `brew info nvm` for details
       export NVM_DIR="$HOME/.nvm"
       . "/usr/local/opt/nvm/nvm.sh"
+      echo "+ nvm"
     fi
   elif [[ $1 = ruby ]]; then
     echo "+ rbenv"
