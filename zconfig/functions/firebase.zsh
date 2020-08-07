@@ -7,18 +7,24 @@ f() {
           firebase database:get $2 | jid
           ;;
       r)
-          firebase database:remove --confirm $2
+          firebase database:remove -y $2
           ;;
       u)
-          firebase database:update --data $3 --confirm $2 
+          firebase database:update -d $3 -y $2 
           ;;
       p)
-          firebase database:push --data $3 $2
+          firebase database:push -d $3 $2
           ;;
       P)
           firebase database:profile
           ;;
       *)
-          echo "${0} {o - open|g - get|r - remove|u - update, p - push, P - profile}"
+          echo "${0} {o|g|r|u|p|P}"
+          echo "o - open"
+          echo "g - get"
+          echo "r - remove"
+          echo "u - update"
+          echo "p - push"
+          echo "P - profile"
   esac
 }
