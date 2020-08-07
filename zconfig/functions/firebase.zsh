@@ -13,6 +13,6 @@ f() {
           firebase database:update $2
           ;;
       *)
-          echo "${0} {f|g|r|u}"
+          echo "${0} {o - open|g - get|r - remove|u - update}"
   esac
 }
