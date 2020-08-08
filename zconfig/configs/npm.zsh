@@ -1,1 +1,1 @@
-PATH=$HOME/.npm-packages:$PATH
+PATH=$HOME/.npm-packages/bin:$PATH
