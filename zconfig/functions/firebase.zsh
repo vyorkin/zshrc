@@ -10,7 +10,7 @@ f() {
           firebase database:remove -y $2
           ;;
       u)
-          firebase database:update -d $3 -y $2 
+          firebase database:update -d $3 -y $2
           ;;
       p)
           firebase database:push -d $3 $2
