@@ -1,7 +1,7 @@
 # vim: set syntax=zsh:
 
 # extra files in ~/.zconfig/configs/pre, ~/.zconfig/configs, and ~/.zconfig/configs/post
-# these are loaded first, second, and third, respectively.
+# these are loaded first, second and third, respectively.
 load_configs() {
   _dir="$1"
   if [ -d "$_dir" ]; then

@@ -11,3 +11,7 @@ eval "$(direnv hook zsh)"
 [[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
 
 bindkey '^Y' fuzzy-search-and-edit
+
+if [ ! ! -x $(command -v nixos-version) ]; then
+  . ~/.zconfig/plugins.zsh
+fi
