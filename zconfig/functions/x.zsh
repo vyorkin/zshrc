@@ -19,6 +19,8 @@ x() {
       . "/usr/local/opt/nvm/nvm.sh"
       echo "+ nvm"
     fi
+  elif [[ $1 = emsdk ]]; then
+    source $HOME/emsdk/emsdk_env.sh
   elif [[ $1 = ruby ]]; then
     echo "+ rbenv"
     eval "$(rbenv init -)"
