@@ -13,6 +13,10 @@ x() {
       . /usr/share/nvm/init-nvm.sh
       echo "+ nvm"
     fi
+    if [[ `uname -r` == *"generic" ]]; then
+      export NVM_DIR="$HOME/.config/nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    fi
     if [[ `uname` == "Darwin" ]]; then
       # see output of `brew info nvm` for details
       export NVM_DIR="$HOME/.nvm"
