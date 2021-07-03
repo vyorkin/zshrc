@@ -12,6 +12,4 @@ eval "$(direnv hook zsh)"
 
 bindkey '^Y' fuzzy-search-and-edit
 
-if ! command -v nixos-version > /dev/null; then
-  . ~/.zconfig/plugins.zsh
-fi
+. ~/.zconfig/plugins.zsh
