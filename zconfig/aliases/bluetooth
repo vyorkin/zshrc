@@ -7,5 +7,5 @@ alias bdh2='bluetoothctl disconnect '
 alias bchy='bluetoothctl connect D4:12:43:C4:48:BD'
 alias bdhy='bluetoothctl disconnect D4:12:43:C4:48:BD'
 
-alias bchm='bluetoothctl connect E3:77:8E:BD:BD:1C'
-alias bdhm='bluetoothctl disconnect E3:77:8E:BD:BD:1C'
+alias bchm='bluetoothctl connect E3:77:8E:BD:BD:22'
+alias bdhm='bluetoothctl disconnect E3:77:8E:BD:BD:22'
