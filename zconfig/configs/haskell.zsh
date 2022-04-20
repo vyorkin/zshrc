@@ -7,6 +7,9 @@ if [ -e ~/.nix-profile/bin/ghc ]; then
   export NIX_GHC_LIBDIR="$HOME/.nix-profile/lib/ghc-$($NIX_GHC --numeric-version)"
 fi
 
+# load ghcup env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+
 # add stack compiler-tools to PATH
 PATH="$HOME/.local/bin:$PATH"
 # PATH=$(stack path --compiler-tools-bin):$PATH

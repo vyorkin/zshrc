@@ -11,7 +11,7 @@ zplug "agkozak/zsh-z"
 zplug "MichaelAquilina/zsh-you-should-use"
 zplug "unixorn/git-extra-commands"
 zplug "mafredri/zsh-async"
-zplug "zdharma/fast-syntax-highlighting"
+zplug "zdharma-continuum/fast-syntax-highlighting"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

@@ -4,6 +4,8 @@ autoload -Uz compinit
 # `-u` is to prevent the "zsh compinit: insecure directories"
 compinit -u
 
+fpath=(~/.zconfig/completions $fpath)
+
 # enable bash completion compatibility mode
 autoload -U +X bashcompinit && bashcompinit
 

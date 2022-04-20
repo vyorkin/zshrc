@@ -17,3 +17,4 @@ export GEOMETRY_GIT_SYMBOL_STASHES="x"     # change the git stash indicator to `
 export GEOMETRY_GIT_GREP="rg"              # define which grep-like tool to use (By default it looks for rg, ag and finally grep)
 export GEOMETRY_GIT_NO_COMMITS_MESSAGE=""  # hide the 'no commits' message in new repositories
 export GEOMETRY_GIT_TIME_DETAILED=true     # show full time (e.g. `12h 30m 53s`) instead of the coarsest interval (e.g. `12h`)
+. "$HOME/.cargo/env"
