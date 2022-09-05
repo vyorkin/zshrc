@@ -1,4 +1,4 @@
-# vim: set syntax=zsh:
+# vim syntax=zsh
 
 # manually load heavy stuff if needed
 # "x" is for "extended shell"

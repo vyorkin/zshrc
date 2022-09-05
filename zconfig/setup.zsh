@@ -1,4 +1,4 @@
-# vim: set syntax=zsh:
+# vim syntax=zsh
 
 # extra files in ~/.zconfig/configs/pre, ~/.zconfig/configs, and ~/.zconfig/configs/post
 # these are loaded first, second and third, respectively.
