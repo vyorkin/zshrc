@@ -3,11 +3,8 @@ alias desk='cd ~/Desktop'
 alias docs='cd ~/Documents'
 
 # projects
-alias work='cd ~/projects/work'
-alias play='cd ~/projects/play'
-alias gith='cd ~/projects/github'
-
-# my
-alias cfg='cd ~/projects/personal/nixos-config'
-alias dots='cd ~/projects/personal/nixos-config/home/dotfiles'
+alias work='cd /Volumes/dev/work'
+alias learn='cd /Volumes/dev/learn'
+alias play='cd /Volumes/dev/play'
+alias gith='cd /Volumes/dev/github'
 alias blog='cd ~/projects/personal/vyorkin.github.io'

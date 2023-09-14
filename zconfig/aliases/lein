@@ -1,4 +1,0 @@
-alias flt='LEIN_FAST_TRAMPOLINE=y lein trampoline test'
-alias flr='LEIN_FAST_TRAMPOLINE=y lein trampoline run'
-
-alias wlf='rlwrap lein figwheel'
