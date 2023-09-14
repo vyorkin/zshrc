@@ -5,11 +5,9 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
-zplug "geometry-zsh/geometry"
 zplug "chisui/zsh-nix-shell"
 zplug "agkozak/zsh-z"
 zplug "MichaelAquilina/zsh-you-should-use"
-zplug "unixorn/git-extra-commands"
 zplug "mafredri/zsh-async"
 zplug "zdharma-continuum/fast-syntax-highlighting"
 

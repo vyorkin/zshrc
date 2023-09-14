@@ -80,3 +80,5 @@ alias gbb='git bisect bad'
 
 alias c='git clone'
 alias u='git up'
+
+alias lg='lazygit'
