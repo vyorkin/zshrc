@@ -1,6 +1,7 @@
 # vim: set syntax=zsh
 
 # load custom executable functions and aliases
+# aliases should be defined before running function like "compdef"
 for f in ~/.zconfig/functions/*; do source $f; done
 for f in ~/.zconfig/aliases/*; do source $f; done
 
@@ -23,3 +24,5 @@ export PATH="$PATH:/Users/vyorkin/.protostar/dist/protostar"
 export PATH="$PATH:/Users/vyorkin/.bin"
 
 export OPENAI_API_KEY='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'
+
+export PATH="$PATH:/Users/vyorkin/.huff/bin"
