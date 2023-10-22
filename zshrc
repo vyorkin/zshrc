@@ -19,10 +19,8 @@ bindkey '^Y' fuzzy-search-and-edit
 # cert, cobalt2, hotstick.minimal, material,
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/hotstick.minimal.omp.json)"
 
-export PATH="$PATH:/Users/vyorkin/.protostar/dist/protostar"
-
-export PATH="$PATH:/Users/vyorkin/.bin"
-
 export OPENAI_API_KEY='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'
 
+export PATH="$PATH:/Users/vyorkin/.protostar/dist/protostar"
+export PATH="$PATH:/Users/vyorkin/.bin"
 export PATH="$PATH:/Users/vyorkin/.huff/bin"
