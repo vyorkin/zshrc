@@ -14,6 +14,7 @@ eval "$(direnv hook zsh)"
 bindkey '^Y' fuzzy-search-and-edit
 
 . ~/.zconfig/plugins.zsh
+. ~/.zconfig/completions.zsh
 
 # mt, agnoster/agnosterplus, blue-owl, the-unnamed,
 # cert, cobalt2, hotstick.minimal, material,
@@ -24,3 +25,4 @@ export OPENAI_API_KEY='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'
 export PATH="$PATH:/Users/vyorkin/.protostar/dist/protostar"
 export PATH="$PATH:/Users/vyorkin/.bin"
 export PATH="$PATH:/Users/vyorkin/.huff/bin"
+
