@@ -26,3 +26,6 @@ export PATH="$PATH:/Users/vyorkin/.protostar/dist/protostar"
 export PATH="$PATH:/Users/vyorkin/.bin"
 export PATH="$PATH:/Users/vyorkin/.huff/bin"
 
+
+# Created by `pipx` on 2024-01-25 21:02:22
+export PATH="$PATH:/Users/vyorkin/Library/Python/3.11/bin"

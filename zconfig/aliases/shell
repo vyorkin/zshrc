@@ -12,10 +12,10 @@ alias -g N='| /dev/null'
 alias -g S='| sort'
 alias -g G='| grep'
 
-alias la='exa -a'
-alias ll='exa -l'
-alias lla='exa -la'
-alias llt='exa -lT'
+alias la='eza -a'
+alias ll='eza -l'
+alias lla='eza -la'
+alias llt='eza -lT'
 
 # common shell functions
 alias less='less -r'
