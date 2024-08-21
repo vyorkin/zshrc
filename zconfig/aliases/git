@@ -16,7 +16,6 @@ alias gsd='git sd'
 alias gsh='git show'
 
 alias gcm='git c'
-alias gci='git ci'
 alias gco='git co'
 alias gcp='git cp'
 
@@ -25,12 +24,8 @@ alias gaa='git aa'
 alias gau='git au'
 
 alias lt='git lt'
-alias guns='git unstage'
-alias gunc='git uncommit'
 
 alias gm='git merge'
-alias gms='git merge --squash'
-alias gam='git amend --reset-author'
 
 alias grv='git r'
 alias grr='git remote rm'
@@ -41,8 +36,8 @@ alias glc='git changes'
 
 alias gf='git fetch'
 
-alias gd='git df'
-alias gdc='git df --cached'
+alias gd='git d'
+alias gdc='git d --cached'
 
 alias gb='git b'
 alias gbd='git b -D'
@@ -51,14 +46,8 @@ alias gpl='git pl'
 alias gps='git ps'
 alias gpsa='git psa'
 
-alias gnb='git nb'
-
 alias grs='git reset'
 alias grsh='git reset --hard'
-
-alias gcln='git clean'
-alias gclndf='git clean -df'
-alias gclndfx='git clean -dfx'
 
 alias gsm='git submodule'
 alias gsmi='git submodule init'

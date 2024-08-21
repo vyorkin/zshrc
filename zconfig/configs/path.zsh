@@ -6,7 +6,7 @@ export PATH="$PATH:/Users/vyorkin/.bin:/Users/vyorkin/bin"
 export PATH="$PATH:/Users/vyorkin/.huff/bin:/Users/vyorkin/.foundry/bin:/Users/vyorkin/.protostar/dist/protostar"
 
 # emacs
-export PATH="$PATH:/Users/vyorkin/.config/emacs/bin"
+export PATH="$PATH:/Users/vyorkin/.emacs.d/bin"
 
 # https://github.com/wofr06/lesspipe
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
