@@ -48,7 +48,7 @@ x() {
     PATH="$HOME/go/bin:$PATH"
     echo "+ go"
   elif [[ $1 = sml ]]; then
-    PATH="usr/local/smlnj/bin:$PATH"
+    PATH="/usr/local/smlnj/bin:$PATH"
     echo "+ smlnj"
   elif [[ $1 =  kubectl ]]; then
     source <(kubectl completion zsh)
