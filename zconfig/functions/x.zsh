@@ -16,9 +16,9 @@ x() {
     if [[ `uname` == "Darwin" ]]; then
       # see output of `brew info nvm` for details
       export NVM_DIR="$HOME/.nvm"
-      [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-      [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-      echo "+ nvm loaded, nvm completion added"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+        echo "+ nvm loaded, nvm completion added"
     fi
   elif [[ $1 = python ]]; then
     # python
@@ -47,6 +47,9 @@ x() {
     export GOPATH="$HOME/go"
     PATH="$HOME/go/bin:$PATH"
     echo "+ go"
+  elif [[ $1 = sml ]]; then
+    PATH="usr/local/smlnj/bin:$PATH"
+    echo "+ smlnj"
   elif [[ $1 =  kubectl ]]; then
     source <(kubectl completion zsh)
     echo "+ kubectl completion added"
