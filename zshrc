@@ -17,5 +17,4 @@ bindkey '^Y' fuzzy-search-and-edit
 
 # mt, agnoster/agnosterplus, blue-owl, the-unnamed,
 # cert, cobalt2, hotstick.minimal, material,
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/hotstick.minimal.omp.json)"
-
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/the-unnamed.omp.json)"
