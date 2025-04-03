@@ -7,6 +7,7 @@ for f in ~/.zconfig/aliases/*; do source $f; done
 
 . ~/.zconfig/setup.zsh
 
+# see: https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
 
 [[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
