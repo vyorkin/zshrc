@@ -12,7 +12,5 @@ eval "$(direnv hook zsh)"
 
 [[ -f ~/.secret_tokens ]] && . ~/.secret_tokens
 
-bindkey '^Y' fuzzy-search-and-edit
-
 . ~/.zconfig/plugins.zsh
 . ~/.zconfig/shell.zsh

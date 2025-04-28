@@ -1,4 +1,4 @@
-f() {
+fireb() {
   case $1 in
       o)
           firebase use $2

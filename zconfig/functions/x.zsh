@@ -26,7 +26,7 @@ x() {
     echo "+ ghcup"
   elif [[ $1 = python ]]; then
     # python
-    export PATH="$PATH:/Users/vyorkin/Library/Python/3.11/bin"
+    export PATH="$PATH:$HOME/Library/Python/3.11/bin"
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
 
@@ -62,11 +62,13 @@ x() {
     complete -o nospace -C /opt/homebrew/bin/terraform terraform
     echo "+ terraform completion added"
   elif [[ $1 = yc ]]; then
-    # The next line updates PATH for Yandex Cloud CLI.
-    if [ -f '/Users/vyorkin/yandex-cloud/path.bash.inc' ]; then source '/Users/vyorkin/yandex-cloud/path.bash.inc'; fi
-    # The next line enables shell command completion for yc.
-    if [ -f '/Users/vyorkin/yandex-cloud/completion.zsh.inc' ]; then source '/Users/vyorkin/yandex-cloud/completion.zsh.inc'; fi
-    echo "+ yandex"
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+      # The next line updates PATH for Yandex Cloud CLI
+      if [ -f "$HOME/yandex-cloud/path.bash.inc" ]; then source "$HOME/yandex-cloud/path.bash.inc"; fi
+      # The next line enables shell command completion for YC
+      if [ -f "$HOME/yandex-cloud/completion.zsh.inc" ]; then source "$HOME/yandex-cloud/completion.zsh.inc"; fi
+      echo "+ yandex"
+    fi
   elif [[ $1 = ocaml ]]; then
     test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
     echo "+ opam initialized"
