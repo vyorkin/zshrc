@@ -14,3 +14,5 @@ eval "$(direnv hook zsh)"
 
 . ~/.zconfig/plugins.zsh
 . ~/.zconfig/shell.zsh
+
+. "$HOME/.local/bin/env"
