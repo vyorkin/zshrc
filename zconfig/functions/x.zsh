@@ -26,12 +26,14 @@ x() {
     echo "+ ghcup"
   elif [[ $1 = python ]]; then
     # python
-    export PATH="$PATH:$HOME/Library/Python/3.11/bin"
+    if [[ `uname` == "Darwin" ]]; then
+      export PATH="$PATH:$HOME/Library/Python/3.11/bin"
+    fi
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
 
     if command -v pyenv 1>/dev/null 2>&1; then
-      eval "$(pyenv init -)"
+      eval "$(pyenv init - zsh)"
       eval "$(pyenv virtualenv-init -)"
     fi
     echo "+ python, pyenv"
@@ -71,7 +73,8 @@ x() {
     fi
   elif [[ $1 = ocaml ]]; then
     test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-    echo "+ opam initialized"
+    eval $(opam env)
+    echo "+ opam-init, opam env"
   elif [[ $1 = capstone ]]; then
     if [[ "$OSTYPE" == "darwin"* ]]; then
       # Capstone

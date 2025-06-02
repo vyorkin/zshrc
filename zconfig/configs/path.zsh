@@ -17,3 +17,6 @@ if [ -x "$(command -v rustc)" ]; then
 
   PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/opt/nvim/"
