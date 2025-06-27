@@ -3,8 +3,8 @@ alias desk='cd ~/Desktop'
 alias docs='cd ~/Documents'
 
 # projects
-alias work='cd /Volumes/dev/work'
-alias learn='cd /Volumes/dev/learn'
-alias play='cd /Volumes/dev/play'
-alias gith='cd /Volumes/dev/github'
+alias work='cd ~/projects/work'
+alias learn='cd ~/projects/learn'
+alias play='cd ~/projects/play'
+alias gith='cd ~/projects/github'
 alias blog='cd ~/projects/personal/vyorkin.github.io'

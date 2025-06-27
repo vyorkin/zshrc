@@ -9,7 +9,7 @@ export PATH="$PATH:$HOME/.huff/bin:$HOME/.config/.foundry/bin:$HOME/.protostar/d
 export PATH="$PATH:$HOME/.emacs.d/bin"
 
 # https://github.com/wofr06/lesspipe
-export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
+export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
 
 # rust
 if [ -x "$(command -v rustc)" ]; then
