@@ -15,4 +15,6 @@ eval "$(direnv hook zsh)"
 . ~/.zconfig/plugins.zsh
 . ~/.zconfig/shell.zsh
 
-. "$HOME/.local/bin/env"
+if [[ `uname` == "Darwin" ]]; then
+  . "$HOME/.local/bin/env"
+fi
