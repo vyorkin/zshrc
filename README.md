@@ -23,3 +23,12 @@ Clone [emsdk](https://github.com/emscripten-core/emsdk.git) to `~/emsdk`:
 ```sh
 git clone https://github.com/emscripten-core/emsdk.git ~/emsdk
 ```
+
+# Secret tokens
+
+Your secret tokens should be in `~/secret_tokens`:
+
+```
+export SRC_ENDPOINT=https://sourcegraph.com
+export SRC_ACCESS_TOKEN={your_src_token}
+```
