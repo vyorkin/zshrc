@@ -17,10 +17,11 @@ alias ll='eza -l'
 alias lla='eza -la'
 alias llt='eza -lT'
 
+alias l='eza -l --icons --git -a'
+
 # common shell functions
 alias less='less -r'
 alias tf='tail -f'
-alias l='less'
 alias lh='ls -alt | head' # see the last modified files
 
 # keys
