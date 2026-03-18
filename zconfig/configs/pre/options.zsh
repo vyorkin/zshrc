@@ -1,6 +1,3 @@
-# enable extended globbing
-setopt extendedglob
-
 setopt globcomplete
 setopt nocaseglob
 

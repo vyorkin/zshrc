@@ -1,21 +1,21 @@
-. ~/.zplug/init.zsh
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "agkozak/zsh-z"
-zplug "zdharma-continuum/fast-syntax-highlighting"
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+if [[ ! -d "$ZINIT_HOME" ]]; then
+  print -P "%F{33}Installing zinit...%f"
+  mkdir -p "$(dirname "$ZINIT_HOME")"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-# Then, source plugins and add commands to $PATH
-zplug load
+source "${ZINIT_HOME}/zinit.zsh"
 
+# Early loads (keybindings and completions depend on these)
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-history-substring-search
+
+# Turbo mode (deferred) for faster startup
+zinit wait lucid for \
+  atload"_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions \
+  zdharma-continuum/fast-syntax-highlighting
+
+zinit wait lucid for agkozak/zsh-z

@@ -1,4 +1,4 @@
-if [[ $(uname) == "Darwin" ]]; then
+if [[ "$OSTYPE" == darwin* ]]; then
   # Good ones are:
   # dark: blue-owl, cert, cobalt2, material, hotstick.minimal, agnoster, agnosterplus, the-unnamed
   # light: mt, pure

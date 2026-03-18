@@ -2,10 +2,10 @@ Inspired by https://github.com/thoughtbot/dotfiles
 
 # Setup
 
-Install the [zplug](https://github.com/zplug/zplug) first:
+Plugin manager ([zinit](https://github.com/zdharma-continuum/zinit)) auto-installs on first shell launch. Or install manually:
 
 ```sh
-git clone https://github.com/zplug/zplug.git ~/.zplug
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 ```
 
 Run the setup script that symlinks `z*`-files to your `$HOME` dir:

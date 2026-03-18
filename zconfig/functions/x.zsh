@@ -9,11 +9,11 @@ x() {
       source ~/.nix-profile/etc/profile.d/nix.sh
     fi
   elif [[ $1 = js ]]; then
-    if [[ `uname -r` == *"generic" ]]; then
+    if [[ "$OSTYPE" == linux* ]]; then
       export NVM_DIR="$HOME/.config/nvm"
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     fi
-    if [[ `uname` == "Darwin" ]]; then
+    if [[ "$OSTYPE" == darwin* ]]; then
       # see output of `brew info nvm` for details
       export NVM_DIR="$HOME/.nvm"
       [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -26,8 +26,10 @@ x() {
     echo "+ ghcup"
   elif [[ $1 = python ]]; then
     # python
-    if [[ `uname` == "Darwin" ]]; then
-      export PATH="$PATH:$HOME/Library/Python/3.11/bin"
+    if [[ "$OSTYPE" == darwin* ]]; then
+      local pybin
+      pybin="$(python3 -c 'import sysconfig; print(sysconfig.get_path("scripts", "posix_user"))' 2>/dev/null)"
+      [[ -n "$pybin" ]] && export PATH="$PATH:$pybin"
     fi
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
@@ -38,7 +40,7 @@ x() {
     fi
     echo "+ python, pyenv"
   elif [[ $1 = emsdk ]]; then
-    source $HOME/emsdk/emsdk_env.sh
+    source "$HOME/emsdk/emsdk_env.sh"
     echo "+ emsdk"
   elif [[ $1 = openai ]]; then
     export OPENAI_API_KEY=$(pass show api/tokens/openai)
@@ -72,8 +74,8 @@ x() {
       echo "+ yandex"
     fi
   elif [[ $1 = ocaml ]]; then
-    test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-    eval $(opam env)
+    test -r "$HOME/.opam/opam-init/init.zsh" && . "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null || true
+    eval "$(opam env)"
     echo "+ opam-init, opam env"
   elif [[ $1 = capstone ]]; then
     if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -98,7 +100,7 @@ x() {
       echo "+ julia"
     fi
   elif [[ $1 = gcloud ]]; then
-    if [[ `uname` == "Darwin" ]]; then
+    if [[ "$OSTYPE" == darwin* ]]; then
       # https://github.com/littleq0903/gcloud-zsh-completion
       # others: https://github.com/unixorn/awesome-zsh-plugins#even-more-completions
       source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"

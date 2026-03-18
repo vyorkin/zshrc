@@ -2,8 +2,8 @@
 
 # load custom executable functions and aliases
 # aliases should be defined before running function like "compdef"
-for f in ~/.zconfig/functions/*; do source $f; done
-for f in ~/.zconfig/aliases/*; do source $f; done
+for f in ~/.zconfig/functions/*; do source "$f"; done
+for f in ~/.zconfig/aliases/*; do source "$f"; done
 
 . ~/.zconfig/setup.zsh
 
@@ -15,6 +15,6 @@ eval "$(direnv hook zsh)"
 . ~/.zconfig/plugins.zsh
 . ~/.zconfig/shell.zsh
 
-if [[ `uname` == "Darwin" ]]; then
+if [[ "$OSTYPE" == darwin* ]]; then
   . "$HOME/.local/bin/env"
 fi
