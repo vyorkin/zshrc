@@ -1,5 +1,6 @@
-# find header files
+# find header files (macOS only)
 fheader() {
+    [[ "$OSTYPE" == darwin* ]] || { echo "macOS only"; return 1; }
     local files
     files=$(find $(xcrun --show-sdk-path)/usr/include -name "*.h" | fzf -m --preview="head -20 {}")
     [ -n "$files" ] && echo "$files" | xargs nvim

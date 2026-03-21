@@ -18,4 +18,7 @@ zinit wait lucid for \
     zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting
 
-zinit wait lucid for agkozak/zsh-z
+# zoxide (faster replacement for zsh-z) — install via: brew install zoxide
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
