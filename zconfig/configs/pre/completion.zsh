@@ -2,8 +2,12 @@ zstyle :compinstall filename "~/.zshrc"
 fpath=(~/.zconfig/completions $fpath)
 autoload -Uz compinit
 
-# `-u` is to prevent the "zsh compinit: insecure directories"
-compinit -u
+# Rebuild compdump only once per day; use cached version otherwise
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit -u
+else
+  compinit -C -u
+fi
 
 # enable bash completion compatibility mode
 autoload -U +X bashcompinit && bashcompinit
@@ -63,5 +67,5 @@ compdef _gnu_generic gcc
 compdef _gnu_generic gdb
 
 # because I don't care about others
-users=(vyorkin root)
+users=(${USERNAME:-${USER:-vyorkin}} root)
 zstyle ':completion:*' users $users

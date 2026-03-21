@@ -1,5 +1,6 @@
 # fshow - git commit browser
 fshow() {
+  git rev-parse --is-inside-work-tree &>/dev/null || { echo "Not a git repository"; return 1; }
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
   fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \

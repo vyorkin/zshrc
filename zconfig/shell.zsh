@@ -1,10 +1,12 @@
-if [[ "$OSTYPE" == darwin* ]]; then
-  # Good ones are:
-  # dark: blue-owl, cert, cobalt2, material, hotstick.minimal, agnoster, agnosterplus, the-unnamed
-  # light: mt, pure
-  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/pure.omp.json)"
-else
-  eval "$(oh-my-posh init zsh --config ~/.poshthemes/pure.omp.json)"
+if command -v oh-my-posh &>/dev/null; then
+  if [[ "$OSTYPE" == darwin* ]]; then
+    # Good ones are:
+    # dark: blue-owl, cert, cobalt2, material, hotstick.minimal, agnoster, agnosterplus, the-unnamed
+    # light: mt, pure
+    eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/pure.omp.json)"
+  else
+    eval "$(oh-my-posh init zsh --config ~/.poshthemes/pure.omp.json)"
+  fi
 fi
 
 # https://zellij.dev/

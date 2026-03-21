@@ -18,14 +18,9 @@ export PATH="$PATH:$HOME/.config/emacs/bin"
 export PATH="$PATH:$HOME/.elan/bin"
 
 # https://github.com/wofr06/lesspipe
-export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
-
-# rust
-# if [ -x "$(command -v rustc)" ]; then
-#   export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-#
-#   PATH="$HOME/.cargo/bin:$PATH"
-# fi
+if [[ -x /opt/homebrew/bin/lesspipe.sh ]]; then
+  export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
+fi
 
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/opt/nvim/"
