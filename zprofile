@@ -22,5 +22,7 @@ if [[ -x /opt/homebrew/bin/lesspipe.sh ]]; then
   export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
 fi
 
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/opt/nvim/"
